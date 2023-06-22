@@ -1,0 +1,36 @@
+@import "components/Header/index";
+@import "components/Home/index";
+@import "components/Footer/index";
+@import "components/MovieKard/index";
+@import "components/Popular/index";
+@import "components/TopRated/index";
+@import "components/MovieDetails/index";
+@import "components/Page/Actors/index";
+@import "components/Page/Treiler/index";
+@import "components/Page/ActorsDetils/index";
+@import "components/Page/movieActor/index";
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: sans-serif;
+}
+button{
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+input{
+  border:none;
+  outline: none;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  width: 1270px;
+  margin: 0 auto;
+}

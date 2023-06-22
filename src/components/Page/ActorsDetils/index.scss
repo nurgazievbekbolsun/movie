@@ -1,0 +1,40 @@
+#actord {
+  padding: 70px 0;
+  background: #595946;
+  color: white;
+  .actord {
+    padding: 0 0 20px 0;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    &--img{
+    }
+    &--block {
+      width: 72%;
+      padding: 30px 0;
+      //padding: 0 0 20px 0;
+      border-bottom: 2px solid white;
+      &__btn{
+          padding: 0 5px;
+        color: #565454;
+      }
+      h1{
+        color: #1a1919;
+        font-size: 36px;
+      }
+      h3{
+        padding: 20px 0 ;
+      }
+      &__day{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 0 20px;
+        h2{
+          padding: 20px 0 ;
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}

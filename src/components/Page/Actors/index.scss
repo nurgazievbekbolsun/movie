@@ -1,0 +1,36 @@
+#actors{
+  background: black;
+  h2{
+    padding: 50px 0 30px 0;
+  }
+  .actors{
+    height: 280px;
+    width: 100%;
+    .slick-slide{
+      display: flex;
+    }
+    &--card{
+      height: 240px;
+      width: 140px;
+      img{
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+      }
+      h4{
+        font-size: 14px;
+        color: white;
+        padding: 5px 0 5px 0;
+      }
+      p{
+        color: white;
+        padding: 5px 0 0 0;
+      }
+    }
+  }
+h3{
+  padding: 40px 0 30px 0;
+  border-bottom: 2px solid #ffffff;
+  color: white;
+}
+}
