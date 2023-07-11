@@ -3,11 +3,13 @@ import {APIKEY} from "../Apikey";
 import {NavLink} from "react-router-dom";
 import MovieKard from "../MovieKard";
 import axios from "axios";
+// import video from "../../image/bezBg.webm"
 // import Slider from "react-slick";
 
-const Home = () => {
+const Home = ({ser}) => {
+   
     const [value, setValue] = useState([])
-    const [count, setCount] = useState(false)
+    const [count, setCount] = useState(true)
     const [count1, setCount1] = useState(false)
     const [trn,setTrn] = useState(false)
     const AddTooPopular = (key) => {
@@ -18,22 +20,18 @@ const Home = () => {
         AddTooPopular(APIKEY)
     }, [])
     const state = Math.floor(Math.random() * 20)
-    // const settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1
-    // };
     return (
         <section id="home">
+        
             <div className="container">
-                <div className="home"
-                     style={{background: `url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/${value.map(el => el.poster_path)[state]}") no-repeat`}}>
-                    <h1>Добро пожаловать.</h1>
+                <div style={{
+                        background: `url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/${value.map(el => el.poster_path)[state]}") no-repeat`
+                        }} className="home"
+                    >
+                    <h1 >Добро пожаловать.</h1>
                     <p>Миллионы фильмов, сериалов и людей. Исследуйте сейчас.</p>
                     <div className="home--input">
-                        <input type="text" placeholder="Найти фильм, сериал, персону...."/>
+                        <input  type="text" placeholder="Найти фильм, сериал, персону...."/>
                         <button>search</button>
                     </div>
                 </div>
@@ -47,7 +45,6 @@ const Home = () => {
                                     padding: '5px 20px',
                                     color: count ? "white" : "black",
                                     borderRadius:'30px',
-                                    // transform:trn === count ? 'translateX(200px)' : 'translateX(0)
                                 }} onClick={() => {
                                     setCount(count ? false : true)
                                     setTrn(trn ? false :true)
@@ -60,7 +57,6 @@ const Home = () => {
                                     padding: '5px 20px',
                                     color: count1 ? "white" : "black",
                                     borderRadius:'30px',
-                                    // transform:trn === count1 ? 'translateX(200px)' : 'translateX(0)
                                 }} onClick={()=>{
                                     setTrn(trn ? true :false)
                                     setCount1(count1 ? false : true)
@@ -69,7 +65,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="slid">
-                        {value.map((el) => <MovieKard key={el} el={el}/>)}
+                        {value.map((el) => <MovieKard ser={ser} key={el} el={el}/>)}
                     </div>
                 </div>
             </div>

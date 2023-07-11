@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useParams} from "react-router-dom";
+import { useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
 import {APIKEY} from "../../Apikey";
-// import MovieActor from "../movieActor";
 import {AiOutlineArrowDown} from "react-icons/ai";
 import MoviActor from "../movieActor";
 
 const ActorsDetails = () => {
     const {actorId} = useParams()
+    const navigate = useNavigate()
+    const goBack = () => navigate(-1)
     const [actorDetails, setActorDetails] = useState({})
     const [next, setNext] = useState(false)
     const getActor = (key) => {
@@ -35,9 +36,9 @@ const ActorsDetails = () => {
                             justifyContent:'space-between',
                             alignItems:'center',
                             color:'white'
-                        }}>{name} <Link style={{
-                        color:'white'}
-                        } to={"/actord"}><AiOutlineArrowDown/></Link></h1>
+                        }}>{name} <AiOutlineArrowDown style={{
+                            cursor:'pointer',
+                        }} onClick={goBack}/></h1>
                         <h3>Биография</h3>
    <p>{biography?.slice(0, 200)}{next ? biography : ''}<span style={{color:'blue',cursor:'pointer'}} onClick={()=>{setNext(!next)}}>{next ? 'Close' : 'More...'}</span>
                         </p>

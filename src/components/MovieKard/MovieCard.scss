@@ -1,11 +1,10 @@
-#movie{
-  .movie{
-    width: 270px;
-    height: 415px;
+.movie{
+    width: 220px;
+    height: 430px;
     border-radius: 10px;
     box-shadow: 0 0 10px #ffffff inset;
-    padding: 4px;
     transition: .4s;
+    margin: 0 5px;
     &:hover{
       box-shadow: 0 0 10px #ffd500 inset;
     }
@@ -38,4 +37,3 @@
       }
     }
   }
-}

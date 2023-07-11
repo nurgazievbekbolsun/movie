@@ -1,7 +1,6 @@
 @import "components/Header/index";
 @import "components/Home/index";
 @import "components/Footer/index";
-@import "components/MovieKard/index";
 @import "components/Popular/index";
 @import "components/TopRated/index";
 @import "components/MovieDetails/index";
@@ -9,6 +8,7 @@
 @import "components/Page/Treiler/index";
 @import "components/Page/ActorsDetils/index";
 @import "components/Page/movieActor/index";
+@import "components/Search/index.scss";
 *{
   padding: 0;
   margin: 0;
@@ -31,6 +31,14 @@ a{
   text-decoration: none;
 }
 .container{
-  width: 1270px;
+  width: 1470px;
   margin: 0 auto;
+}
+
+.black{
+  background: black;
+}
+
+.gray{
+  background: white;
 }
