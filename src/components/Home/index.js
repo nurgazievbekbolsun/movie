@@ -31,6 +31,9 @@ const Home = ({ser}) => {
                     <h1 >Добро пожаловать.</h1>
                     <p>Миллионы фильмов, сериалов и людей. Исследуйте сейчас.</p>
                     <div className="home--input">
+
+
+                        
                         <input  type="text" placeholder="Найти фильм, сериал, персону...."/>
                         <button>search</button>
                     </div>
