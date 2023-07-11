@@ -1,61 +1,104 @@
-#header{
+#header {
   background: #0c2249;
-  .header{
+// height:100px;
+position: sticky;
+top: 0;
+backdrop-filter: blur(10px);
+.bler{
+  // padding: 20px 0 0 0;
+  input{
+    &::placeholder{
+      color: white;
+    }
+  }
+}
+  .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
     margin: 0 40px;
-    img{
+
+    img {
       width: 200px;
     }
-    &--link{
+
+    &--link {
       display: flex;
       align-items: center;
       gap: 35px;
-      .active{
+
+      .active {
         color: #20b7b7;
       }
-      a{
+
+      a {
         font-size: 18px;
         color: white;
       }
     }
-    &--group{
+
+    &--group {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 35px ;
-      a{
+      gap: 25px;
+
+      &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: relative;
+
+        &--bg {
+          position: absolute;
+          right:30px;
+          top: -5px;
+          font-size: 20px;
+          background: red;
+          color: wheat;
+          border-radius: 8px;
+          order: -1;
+          padding: 0 4px;
+        }
+      }
+
+      a {
         color: white;
         font-size: 18px;
         font-weight: 700;
+        padding:6px 0 6px 0;
       }
-      select{
+
+      select {
         background: none;
-        border:1.4px solid white;
-        padding: 0 1px 2px 1px ;
+        border: 1.4px solid white;
+        padding: 0 1px 2px 1px;
         color: white;
         font-size: 16px;
         text-decoration: none;
         outline: none;
         border-radius: 4px;
         -webkit-appearance: none;
+
         //-moz-appearance: none;
         //appearance: none;
-        option{
+        option {
           color: white;
           font-size: 20px;
-           background: black;
+          background: black;
           padding: 4px;
           width: 200px;
         }
       }
-      button{
-       font-size: 18px ;
+
+      button {
+        font-size: 18px;
         color: white;
       }
-      #btn{
+
+      #btn {
         color: #22bfef;
       }
     }

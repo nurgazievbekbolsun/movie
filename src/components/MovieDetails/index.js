@@ -8,9 +8,9 @@ import {BsFillBookmarkFill} from "react-icons/bs";
 import Actors from "../Page/Actors";
 import Treiler from "../Page/Treiler";
 import {FiX} from "react-icons/fi";
-// import ActorsDetils from "../Page/ActorsDetils";
+import fac from "../../image/bezBg.webm"
 
-const MovieDetails = () => {
+const MovieDetails = ({ser}) => {
     const [ten,setTen] = useState(false)
     const [modal, setModal] = useState(false)
     const [color,setColor] = useState(false)
@@ -27,25 +27,37 @@ const MovieDetails = () => {
     useEffect(() => {
         getDetails(APIKEY)
     }, [])
-    console.log(details)
+    console.log("DEtails",details)
     const {
         title, poster_path, backdrop_path,
          vote_average, tagline, runtime, genres, release_date
         , overview,
-    } = details
+    } = details   
     return (
         <>
-            <div style={{
+            <div  style={{
+                boxShadow:'900px 0 0 400px black inset',
                 objectFit: 'cover',
-                background: `url("https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces//${backdrop_path
-                }") no-repeat center/cover`
+                background: `url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${backdrop_path}) no-repeat center/cover`
             }} id="details">
+                 {/* {
+                  <video autoPlay loop style={{
+                position:'absolute',
+                top:'-70px',
+                width:'100%',
+                  height:'100%'    ,
+                  zIndex:'-2'      
+         }}  src={fac}>
+         </video> 
+        
+            } */}
                 <div className="container">
-                    <div className="details">
+                    <div  
+             className="details">
+               
                             <div className="details--ten">
-                                <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${poster_path}`} alt="img"
+                                <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${details.poster_path}`} alt="img"
                                     onClick={()=>{
-                                        // setTen(false)
                                         setModal(true)}}/>
                                 <div className="details--ten__modal" style={{
                                     boxSizing:'border-box',
