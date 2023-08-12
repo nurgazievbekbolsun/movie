@@ -8,6 +8,10 @@ import axios from "axios";
 
 const Home = ({ser}) => {
    
+
+
+
+    
     const [value, setValue] = useState([])
     const [count, setCount] = useState(true)
     const [count1, setCount1] = useState(false)
