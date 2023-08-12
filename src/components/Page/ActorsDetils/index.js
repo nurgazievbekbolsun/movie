@@ -8,7 +8,7 @@ import MoviActor from "../movieActor";
 const ActorsDetails = () => {
     const {actorId} = useParams()
     const navigate = useNavigate()
-    const goBack = () => navigate(-1)
+    const goBack = () => navigate('/movie/details/455476')
     const [actorDetails, setActorDetails] = useState({})
     const [next, setNext] = useState(false)
     const getActor = (key) => {
@@ -18,6 +18,7 @@ const ActorsDetails = () => {
     useEffect(() => {
         getActor(APIKEY)
     }, [])
+    console.log(actorDetails);
     console.log('actor', actorDetails)
     const {
         profile_path, birthday, place_of_birth, also_known_as,

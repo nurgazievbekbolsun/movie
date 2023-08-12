@@ -22,10 +22,10 @@ const Home = ({ser}) => {
     const state = Math.floor(Math.random() * 20)
     return (
         <section id="home">
-        
             <div className="container">
                 <div style={{
-                        background: `url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/${value.map(el => el.poster_path)[state]}") no-repeat`
+                        background: `url("https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/${value
+                        .map(el => el.poster_path)[state]}") no-repeat`
                         }} className="home"
                     >
                     <h1 >Добро пожаловать.</h1>

@@ -2,11 +2,12 @@ import React from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import "./MovieCard.scss"
 const MovieKard = ({ser,el}) => {
-    console.log("ser",ser);
+   
     const nav = useNavigate()
     const getNav =() => {
             nav(`/movie/details/${el.id}`)
     }
+     console.log("ser",ser);
     return (
             <div className="movie">
     
